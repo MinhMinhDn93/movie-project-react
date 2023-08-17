@@ -13,7 +13,14 @@ const PopularFilm = () => {
       <h1>PopularFilm</h1>
       {isLoading && <div>Loading.....</div>}
       {products.map((product) => {
-        return <li>{product.id}</li>;
+        return (
+          <li>
+            <img
+              src={`https://image.tmdb.org/t/p/w500${product.poster_path}`}
+              alt=""
+            />
+          </li>
+        );
       })}
     </div>
   );

@@ -9,6 +9,7 @@ interface Product {
   id: number;
   title: string;
   price: number;
+  poster_path: string;
   images: string[];
   category: {
     id: number;
