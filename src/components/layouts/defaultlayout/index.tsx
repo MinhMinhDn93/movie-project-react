@@ -3,6 +3,9 @@ import Header from "../header";
 import NavBar from "../navbar";
 import styles from "./defaultlayout.module.css";
 import Content from "../content";
+// import Getdata from "../../Getdata/GetMovie";
+import PopularFilm from "../../PopularFilm";
+
 function DefaultLayout() {
   return (
     <>
@@ -15,7 +18,11 @@ function DefaultLayout() {
             <NavBar />
           </div>
           <div className={clsx(styles.content)}>
-            <Content />
+            <Content>
+              {/* <Getdata />
+               */}
+              <PopularFilm />
+            </Content>
           </div>
         </div>
       </div>

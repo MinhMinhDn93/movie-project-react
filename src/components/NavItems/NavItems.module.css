@@ -4,3 +4,6 @@
     align-items: center;
     color: #b7b7b7;
 }
+.link:hover {
+    color: #fff; 
+  }
