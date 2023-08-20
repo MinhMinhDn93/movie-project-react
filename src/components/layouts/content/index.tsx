@@ -6,7 +6,6 @@ interface Content {
 function Content({ children }: Content) {
   return (
     <>
-      Đây là content
       {children}
     </>
   );

@@ -1,9 +1,40 @@
 .navbar_wrapper {
     display: flex;
     flex-direction: column;
-    row-gap: 15px;
+    row-gap: 20px;
     position: fixed;
     top: 100px;
     left: 10px;
     z-index: 100;
+}
+
+@media screen and (max-width : 426px) {
+    .navbar_wrapper {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width : 769px) {
+    .navbar_wrapper {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width : 1025px) {
+    .navbar_wrapper {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        height: 50px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        top: auto;
+        transform: translateY(0);
+        row-gap: 1px;
+        padding: 10px;
+        margin-top: 20px;
+        border-top: 1px solid hsl(200 100% 99% / 5%);
+        background: linear-gradient(8deg, hsl(240 17% 14% / 100%) 5%, hsl(240 17% 14% / 100%) 100%);
+    }
 }

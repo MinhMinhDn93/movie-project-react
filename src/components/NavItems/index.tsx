@@ -9,11 +9,11 @@ type NavItemType ={
 };
 function NavItem ({label,icon,url}: NavItemType) {
   return (
-    <li className={styles.navitem}>
+    <div className={styles.navitem}>
         <div className={styles.icon}>{icon}</div>
-        <a href="">{label}</a>
-        {/* <Link to={`/${url}`}>{label}</Link> */}
-    </li>
+        {/* <a href="">{label}</a> */}
+        <Link to={`${url}`}>{label}</Link>
+    </div>
   )
 }
 

@@ -1,0 +1,25 @@
+.title_film{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #2d2e37;
+    padding: 8px 14px;
+    width: 100%;
+    height: 45px;
+    margin: auto;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    color: #fcfeff;
+    font-size: 20px;
+    font-weight: 500;
+}
+@media screen and (max-width : 426px) {
+    .title_film {
+        width: 100%;
+    }
+}
+@media screen and (max-width : 769px) {
+    .title_film {
+        width: 100%;
+    }
+}

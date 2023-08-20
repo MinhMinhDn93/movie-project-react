@@ -1,0 +1,47 @@
+body {
+    background-color:#1E1E2A;
+}
+.header{
+    background-color: antiquewhite;
+    height: 50px;
+}
+.aside{
+    display: flex;
+}
+
+.content{
+    flex: 1;
+    /* max-width: 1300px; */
+    max-width: 1060px;
+    margin: auto;
+    width: 100%;
+}
+.main_content {
+    
+    margin: auto;
+    width: 100%;
+}
+.button_wrapper{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    column-gap: 3px;
+}
+.button_up,
+.button_down {
+    background-color:#ffb43a ;
+    color: #fcfeff;
+}
+.button_up:hover,
+.button_down:hover {
+    background-color:hsl(37, 94%, 57%) ;
+}
+@media(max-width: 1025px){
+    .main_content {
+      margin: auto;
+      width: 80%;
+    }
+  }
+
+
+

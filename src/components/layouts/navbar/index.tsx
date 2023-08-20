@@ -8,11 +8,11 @@ import { FaRegCompass,FaRegHeart } from 'react-icons/fa';
 function NavBar() {
   return <>
   <div className={styles.navbar_wrapper}>
-      <NavItem  icon={<HiOutlineHome/>} label='Home' url='home'/>
-      <NavItem  icon={<BiSolidHot/>} label='Trending' url='trending'/>
-      <NavItem  icon={<FaRegCompass/>} label='Explore' url='explore'/>
-      <NavItem  icon={<BiFilm/>} label='Movies' url='movies'/>
-      <NavItem  icon={<FaRegHeart/>} label='Favorite' url='favorite'/>
+      <NavItem  icon={<HiOutlineHome/>} label='Home' url='/'/>
+      <NavItem  icon={<BiSolidHot/>} label='PopularMovie' url='/popular'/>
+      <NavItem  icon={<FaRegCompass/>} label='Now Playing' url='/now_playing'/>
+      <NavItem  icon={<BiFilm/>} label='Upcoming' url='/upcoming'/>
+      <NavItem  icon={<FaRegHeart/>} label='Top Rated' url='/toprated'/>
   </div>
   </>;
 }

@@ -1,0 +1,29 @@
+.container {
+    max-width: 1060px;
+    margin: auto;
+    width: 100%;
+}
+.footer_wrapper {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    margin-top: 45px;
+    margin-bottom: 45px;
+}
+.namebutton {
+    background-color:#ffb43a;
+    color: #fcfeff;
+    font-weight: 300;
+    border-radius: 5px;
+    padding: 12px 20px;
+}
+.namebutton:hover {
+    background-color:hsl(37, 94%, 57%);
+}
+.desc {
+    font-size: 18px;
+    color: #fcfeff;
+}

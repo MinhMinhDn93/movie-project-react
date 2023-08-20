@@ -18,3 +18,13 @@
     align-items: center;
     padding: 20px 0;
 }
+@media screen and (max-width : 426px){
+    .container{
+        max-width: 425px;
+    }
+}
+@media screen and (max-width : 769px) {
+    .container{
+        max-width: 768px;
+    }
+}
