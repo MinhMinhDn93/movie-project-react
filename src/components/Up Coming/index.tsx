@@ -1,21 +1,22 @@
 import clsx from "clsx";
-import Header from "../header";
-import NavBar from "../navbar";
-import styles from "./PopularMovie.module.css";
-import Content from "../content";
-import Footer from "../footer";
-import GetDetailFilm from "../../GetDetailFilm";
+import styles from "./UpComing.module.css";
 import { useLocation, useSearchParams, useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-import PosterMovie from "../../PosterMovie";
-function PopularMovie() {
+import Header from "../layouts/header";
+import NavBar from "../layouts/navbar";
+import Content from "../layouts/content";
+import PosterMovie from "../PosterMovie";
+import GetDetailFilm from "../GetDetailFilm";
+import Footer from "../layouts/footer";
+
+function UpComing() {
   const location = useLocation();
   const [params] = useSearchParams();
 
   const pages = params.get('page');
   const int_page = pages ? parseInt(pages) : 1;
 
-  console.log(location);
+  console.log('location',location);
 
   const [count, setCount] = useState(1);
 
@@ -32,7 +33,7 @@ function PopularMovie() {
   const paginatePage = useNavigate();
 
   useEffect(() => {
-    paginatePage(`/popular?page=${count}`);
+    paginatePage(`/upcoming?page=${count}`);
   }, [count]);
 
   return (
@@ -49,7 +50,7 @@ function PopularMovie() {
             <div className={styles.main_content}>
               <Content>
               <PosterMovie title="Hitman's Wife's Bodyguard" img="./image/home-background.png" desc="Releasing 23 july" />
-                <GetDetailFilm url={`https://api.themoviedb.org/3/movie/popular?language=en-US&page=${int_page}`} listmovie='Popular Film' 
+                <GetDetailFilm url={`https://api.themoviedb.org/3/movie/upcoming?language=en-US&page=${int_page}`} listmovie='Up Coming' 
                  className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 lg:gap-5"/>
                 {count === 1 ? (
                   <div className={styles.button_wrapper}>
@@ -73,4 +74,4 @@ function PopularMovie() {
   );
 }
 
-export default PopularMovie;
+export default UpComing;

@@ -7,6 +7,7 @@ import Footer from "../footer";
 import GetDetailFilm from "../../GetDetailFilm";
 import { useLocation, useSearchParams, useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
+import PosterMovie from "../../PosterMovie";
 function NowPlaying() {
   const location = useLocation();
   const [params] = useSearchParams();
@@ -14,7 +15,7 @@ function NowPlaying() {
   const pages = params.get('page');
   const int_page = pages ? parseInt(pages) : 1;
 
-  console.log(location);
+  console.log('location',location);
 
   const [count, setCount] = useState(1);
 
@@ -31,7 +32,7 @@ function NowPlaying() {
   const paginatePage = useNavigate();
 
   useEffect(() => {
-    paginatePage(`/popular?page=${count}`);
+    paginatePage(`/now_playing?page=${count}`);
   }, [count]);
 
   return (
@@ -47,6 +48,7 @@ function NowPlaying() {
           <div className={clsx(styles.content)}>
             <div className={styles.main_content}>
               <Content>
+              <PosterMovie title="Hitman's Wife's Bodyguard" img="./image/home-background.png" desc="Releasing 23 july" />
                 <GetDetailFilm url={`https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=${int_page}`} listmovie='Now Playing' 
                  className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 lg:gap-5"/>
                 {count === 1 ? (

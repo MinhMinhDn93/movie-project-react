@@ -13,4 +13,4 @@ const PopularMoviePage = () => {
   )
 }
 
-export default PopularMoviePage
+export default PopularMoviePage;
