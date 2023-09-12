@@ -75,3 +75,17 @@ Tự định nghĩa thêm các class dựa trên các class của tailwind
         @apply bg-indigo-600 hover:bg-indigo-500 text-white
     }
 }
+:root {
+    --primary: #fe2c55;
+    --black: #000;
+    --default-layout-header-height: 60px;
+    --default-layout-width: 1150px;
+    --main-color: #ffb43a;
+    --text-color: #fcfeff;
+    --hover-color: hsl(37, 94%, 57%);
+    --container-color: #2d2e37;
+    --body-color: #1e1e2a;
+}
+.ant-modal .ant-modal-content {
+    padding: 0 !important;
+}

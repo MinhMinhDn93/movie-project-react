@@ -25,6 +25,8 @@ function DefaultLayout() {
                 <PosterMovie title="Hitman's Wife's Bodyguard" img="./image/home-background.png" desc="Releasing 23 july" />
                 <GetFilm url="https://api.themoviedb.org/3/movie/popular" listmovie='Popular Film' />
                 <GetFilm url="https://api.themoviedb.org/3/movie/now_playing" listmovie='Now Playing' />
+                <GetFilm url="https://api.themoviedb.org/3/movie/upcoming" listmovie='UpComing' />
+                <GetFilm url="https://api.themoviedb.org/3/movie/top_rated" listmovie='Top Rated' />
               </Content>
             </div>
           </div>

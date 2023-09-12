@@ -37,14 +37,12 @@
     height: 40px;
     font-size: 22px;
     border-radius: 50%;
-    background-color:#ffb43a ;
-    color: #fcfeff;
     align-items: center;
     display: flex;
     justify-content: center;
 }
 .play_btn:hover {
-    background-color:hsl(37, 94%, 57%) ;
+    background-color:hsl(37, 80%, 57%) ;
 }
 .wrapper .swiper-pagination {
     display: none;

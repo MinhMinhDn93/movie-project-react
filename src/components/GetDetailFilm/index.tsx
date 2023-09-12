@@ -7,7 +7,7 @@ import "swiper/css/scrollbar";
 import axios from 'axios';
 import styles from './GetDetailFilm.module.css'
 import MovieBox from "../MovieBox";
-
+import { Link } from "react-router-dom"
 
 
 
@@ -49,9 +49,9 @@ const GetDetailFilm = ({listmovie,url,className}:{listmovie:string,url:string,cl
       {isLoading && <div>Loading.....</div> }
       <div className={className}>
           {movies.map(movie => (
-            <div key={movie.id}>
+            <Link key={movie.id} to={`/moviesdetail/${movie.id}`}>
               <MovieBox poster_path={movie.poster_path} title={movie.title}/>
-            </div>
+            </Link>
           ))}   
       </div>
 

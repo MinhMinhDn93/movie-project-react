@@ -1,7 +1,6 @@
+import Icon from '../Icon';
 import styles from './MovieBox.module.css'
 import { BiRightArrow } from 'react-icons/bi';
-
-
 type MovieBoxType ={
     poster_path : string,
     title: string,
@@ -14,10 +13,8 @@ function MovieBox ({poster_path,title,overview,vote_average}: MovieBoxType) {
                 <img src={`https://image.tmdb.org/t/p/w500${poster_path}`} alt={title} />
                 <h3 className={styles.title_movie}>{title}</h3>
                 <span className={styles.movie_type}>action</span>
-                <a href="" className={styles.play_btn}>{<BiRightArrow/>}</a>
-                {/* <p>{overview}</p>
-                <p>Vote Average: {vote_average}</p> */}
+                <a href="" className={styles.play_btn}>{<Icon/>}</a>
               </div>
   )
 }
-export default MovieBox
+export default MovieBox;
