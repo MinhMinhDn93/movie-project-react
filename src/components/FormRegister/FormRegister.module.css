@@ -1,0 +1,55 @@
+.content{
+    flex: 1;
+    max-width: 1060px;
+    margin: auto;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.form {
+    width: 80%;
+    height: 20%;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    margin-top: 250px;
+    background-color: var(--main-color);
+}   
+.form label {
+    color: var(--text-color);
+    width: 20%;
+    font-size: large;
+    font-weight: 500;
+}
+.form input {
+    width: 75%;
+    border-radius: 3px;
+}
+.form_item,
+.form_item_gender {
+    margin: 10px 15px;
+}
+.form button {
+    margin-left: 15px;
+    margin-bottom: 5px;
+}
+.form_item_gender label {
+    width: 20%;
+}
+.form_item_gender input {
+    width: 20%;
+}
+@media screen and (max-width : 426px) {
+    .content {
+        width: 100%;
+    }
+    .form label {
+        width: 30%;
+    }
+}
+@media screen and (max-width : 769px) {
+    .content {
+        width: 100%;
+    }
+   
+}

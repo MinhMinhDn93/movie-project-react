@@ -10,6 +10,8 @@ import UpComingPage from "./pages/UpComingPage";
 import DetailMoviesPage from "./pages/DetailMoviesPage";
 import NoPage from "./pages/NoPage";
 import SearchMoviePage from "./pages/SearchMoviePage";
+import LoginPage from "./pages/LoginPage";
+import RegisterPage from "./pages/RegisterPage";
 
 function App() {
   return (
@@ -23,6 +25,8 @@ function App() {
             <Route path="/top_rated" element={<TopRatedPage />} />
             <Route path="/moviesdetail/:id" element={<DetailMoviesPage />} />
             <Route path="/search" element={<SearchMoviePage />} />
+            <Route path="/login" element={<LoginPage />} />
+            <Route path="/register" element={<RegisterPage />} />
             <Route path="*" element={<NoPage/>} />
         </Routes>
       </BrowserRouter>

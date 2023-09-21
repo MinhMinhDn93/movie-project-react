@@ -11,13 +11,11 @@ body {
 
 .content{
     flex: 1;
-    /* max-width: 1300px; */
     max-width: 1060px;
     margin: auto;
     width: 100%;
 }
-.main_  content {
-    
+.main_content {
     margin: auto;
     width: 100%;
 }

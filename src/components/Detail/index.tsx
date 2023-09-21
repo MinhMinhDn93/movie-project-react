@@ -20,6 +20,7 @@ import Icon from "../Icon";
 import Modal from "antd/es/modal/Modal";
 import video from '../../../public/video/Download.mp4'
 import CommentBox from "../CommentBox";
+import IconGreen from "../IconGreen";
 interface Genres {
   id: number;
   name: string;
@@ -53,9 +54,13 @@ const Detail = () => {
   const [character, setCharacter] = useState<Character>();
   const { id } = useParams(); // Lấy tham số "id" từ đường dẫn
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [loginModalVisible, setLoginModalVisible] = useState(false);
 
 
 
+  const handleLoginRequired = () => {
+    setLoginModalVisible(true);
+  };
   const showModal = () => {
     const trailer = document.getElementById("trailer");
     setIsModalOpen(true);
@@ -105,9 +110,21 @@ const Detail = () => {
 
   return (
     <div className={clsx(styles.wrapper)}>
-      <Modal  open={isModalOpen} onOk={handleOk} onCancel={handleCancel} width={"40%"} footer={false} closeIcon={false}>
-        <div style={{width: "100%", display: "flex", justifyContent: "center"}}>
+      <Modal open={isModalOpen} onOk={handleOk} onCancel={handleCancel} width={"40%"} footer={false} closeIcon={false}>
+        <div style={{ width: "100%", display: "flex", justifyContent: "center" }}>
           <video src={video} width={1000} autoPlay={true} id="trailer" onEnded={handleCancel}></video>
+        </div>
+      </Modal>
+      <Modal
+        open={loginModalVisible}
+        onOk={() => setLoginModalVisible(false)}
+        onCancel={() => setLoginModalVisible(false)}
+        closeIcon={false}
+        footer={null}
+        width={"40%"}
+      >
+        <div className={styles.box_notice}>
+          <p>You need to log in to watch movies !</p>
         </div>
       </Modal>
       {data && (
@@ -156,12 +173,12 @@ const Detail = () => {
                   <li>
                     <AiFillStar />
                   </li>
-                  <li className={clsx("flex", "items-center")}>
+                  <li className={clsx("flex", "items-center")} onClick={handleLoginRequired}>
                     <Icon />
                     <span className={clsx("pl-1")}> Play now</span>
                   </li>
                   <li className={clsx("flex", "items-center")} onClick={showModal}>
-                    <Icon />
+                    <IconGreen />
                     <span className={clsx("pl-1")} >Watch Trailer</span>
                   </li>
                 </ul>
@@ -210,7 +227,7 @@ const Detail = () => {
             </Swiper>
           </div>
           <div>
-            <CommentBox/>
+            <CommentBox />
           </div>
         </div>
       )}
