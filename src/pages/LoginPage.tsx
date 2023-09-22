@@ -1,4 +1,5 @@
-import FormLogin from '../components/FormLogin';
+
+import FormLoginLayout from '../components/FormLogin/FormLoginLayout';
 import GlobalStyles from '../components/globalstyles';
 
 
@@ -7,7 +8,7 @@ const LoginPage = () => {
   return (
     <>
       <GlobalStyles>
-        <FormLogin/>
+        <FormLoginLayout/>
      </GlobalStyles> 
     </>
   )

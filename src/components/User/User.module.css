@@ -17,11 +17,12 @@
     width: 70px;
     height: 80px;
     bottom: 50 ;
-    left: 0;
-    font-size: 12px;
+    right: 10px;
+    font-size: 14px;
     color: var(--main-color);
     background-color:var(--container-color);
     box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
 }
 .userwrapper:hover .link_user{
     display: flex;

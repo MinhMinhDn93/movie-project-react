@@ -1,5 +1,6 @@
 
-import FormRegister from '../components/FormRegister';
+
+import FormRegisterLayout from '../components/FormRegister/FormRegisterLayout';
 import GlobalStyles from '../components/globalstyles';
 
 
@@ -8,7 +9,7 @@ const RegisterPage = () => {
   return (
     <>
       <GlobalStyles>
-        <FormRegister/>
+        <FormRegisterLayout/>
      </GlobalStyles> 
     </>
   )

@@ -1,0 +1,36 @@
+import clsx from "clsx";
+import styles from "./FormLoginLayout.module.css";
+import Header from "../../layouts/header";
+import NavBar from "../../layouts/navbar";
+import Content from "../../layouts/content";
+import PosterMovie from "../../PosterMovie";
+import FormLogin from "..";
+import Footer from "../../layouts/footer";
+import HeaderLogo from "../../HeaderLogo";
+
+function FormLoginLayout() {
+
+  return (
+    <>
+      <div className={clsx(styles.wrapper)}>
+        <div className={clsx(styles.header)}>
+          <HeaderLogo />
+        </div>
+        <div className={clsx(styles.aside)}>
+          <div className={clsx(styles.content)}>
+            <div className={styles.main_content}>
+              <Content>
+              <FormLogin/>
+              </Content>
+            </div>
+          </div>
+        </div>
+        <div className={clsx(styles.footer)}>
+          <Footer desc="© MovieVennie All Right Reserved" />
+        </div>
+      </div>
+    </>
+  );
+}
+
+export default FormLoginLayout;

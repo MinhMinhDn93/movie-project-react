@@ -7,13 +7,16 @@ import clsx from "clsx";
 function Footer({ namebutton, desc }: { namebutton?: string, desc: string }) {
   return (<header className={styles.header}>
     <div className={styles.container}>
-      <div className={clsx(styles.footer_top, "grid grid-col-1 md:grid-cols-2 lg:grid-cols-3 gap-3")}>
-        <div >
+      <div className={clsx(styles.footer_top, "grid grid-col-1 md:grid-cols-3 lg:grid-cols-3 gap-3")}>
+        <div className={styles.footer_item}>
           <div>
             <HeaderLogo />
           </div>
-          <div className="text-white">
-            <p>3298 Grant Street Longview, TX United Kingdom 75601</p>
+          <div className={styles.footer_item_1}>
+            <div>
+              <p>3298 Grant Street Longview,</p>
+              <p> TX United Kingdom 75601</p>
+            </div>
             <p>1-202-555-0106</p>
             <div className={styles.list_icon}>
               <BiLogoFacebookCircle />

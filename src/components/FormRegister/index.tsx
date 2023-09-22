@@ -2,6 +2,7 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from "yup";
 import styles from './FormRegister.module.css';
+import { Link } from "react-router-dom";
 
 const schema = yup.object({
   user: yup.string().min(4, 'Please enter your user').required(),
@@ -26,7 +27,11 @@ export default function FormRegister() {
   const onSubmit = (data: FormData) => console.log(data);
   return (
     <div className={styles.content}>
+      <div className={styles.title}><h3>Welcome Back!</h3>
+      <button type="submit"><Link to={`/login`}>Sign In</Link></button>
+      </div>
       <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
+        <h3>Register</h3>
         <div className={styles.form_item}>
           <label htmlFor="">User:</label>
           <input placeholder="User" {...register("user")} />
@@ -61,7 +66,7 @@ export default function FormRegister() {
           </label>
           <p className='text-red-500'>{errors.gender?.message}</p>
         </div>
-        <button type="submit">Submit</button>
+        <button type="submit">Sign Up</button>
       </form>
     </div>
   );
