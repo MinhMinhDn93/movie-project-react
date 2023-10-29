@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import styles from './CommentBox.module.css'
 import ButtonRanks from './ButtonRanks';
 const CommentBox = () => {

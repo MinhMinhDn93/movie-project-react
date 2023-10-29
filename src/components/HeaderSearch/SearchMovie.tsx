@@ -1,4 +1,4 @@
-import React from 'react';
+
 import styles from './SearchMovie.module.css';
 import { FiSearch } from 'react-icons/fi';
 import { Link } from "react-router-dom";

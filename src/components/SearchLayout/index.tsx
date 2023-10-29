@@ -1,12 +1,9 @@
 import clsx from "clsx";
 import styles from "./SearchLayout.module.css";
-import { useLocation, useSearchParams, useNavigate } from 'react-router-dom';
-import { useEffect, useState } from 'react';
 import Header from "../layouts/header";
 import NavBar from "../layouts/navbar";
 import Content from "../layouts/content";
 import PosterMovie from "../PosterMovie";
-import GetDetailFilm from "../GetDetailFilm";
 import Footer from "../layouts/footer";
 import SearchFilm from "../SearchFilm";
 

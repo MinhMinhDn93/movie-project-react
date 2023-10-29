@@ -1,13 +1,13 @@
 import Icon from '../Icon';
 import styles from './MovieBox.module.css'
-import { BiRightArrow } from 'react-icons/bi';
+
 type MovieBoxType ={
     poster_path : string,
     title: string,
     overview?: string,
     vote_average?:number,
 };
-function MovieBox ({poster_path,title,overview,vote_average}: MovieBoxType) {
+function MovieBox ({poster_path,title}: MovieBoxType) {
   return (
     <div className={styles.movie_box}>
                 <img src={`https://image.tmdb.org/t/p/w500${poster_path}`} alt={title} />

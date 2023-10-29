@@ -44,10 +44,16 @@ interface Cast {
   character: string;
   id: number;
 }
+
 interface Character {
   id: number;
   cast: Cast[];
 }
+
+type TrailerType = {
+  load: () => void;
+  pause: () => void;
+};
 
 const Detail = () => {
   const [data, setData] = useState<dataType>();
@@ -62,7 +68,7 @@ const Detail = () => {
     setLoginModalVisible(true);
   };
   const showModal = () => {
-    const trailer = document.getElementById("trailer");
+    const trailer: TrailerType | null = document.getElementById("trailer") as TrailerType | null;
     setIsModalOpen(true);
     trailer?.load();
   };
@@ -72,7 +78,7 @@ const Detail = () => {
   };
 
   const handleCancel = () => {
-    const trailer = document.getElementById("trailer");
+    const trailer: TrailerType | null = document.getElementById("trailer") as TrailerType | null;
     setIsModalOpen(false);
     trailer?.pause();
   };

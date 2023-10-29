@@ -5,7 +5,6 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import "swiper/css/scrollbar";
 import axios from 'axios';
-import styles from './SearchFilm.module.css'
 import MovieBox from "../MovieBox";
 import { Link } from "react-router-dom"
 import useSearch from "../../hooks/useSearch";

@@ -21,7 +21,7 @@ interface Data {
 
 export default function useGetMovies(url: string) {
   const [data, setData] = useState<Data[]>([]);
-  const [error, setError] = useState<string>("");
+  const [error] = useState<string>("");
   const [loading, setLoading] = useState<boolean>(false);
 
   useEffect(() => {

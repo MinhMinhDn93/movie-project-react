@@ -4,7 +4,7 @@ import styles from './footer.module.css'
 import { FaYoutube } from 'react-icons/fa';
 import clsx from "clsx";
 
-function Footer({ namebutton, desc }: { namebutton?: string, desc: string }) {
+function Footer({ desc }: { namebutton?: string, desc: string }) {
   return (<header className={styles.header}>
     <div className={styles.container}>
       <div className={clsx(styles.footer_top, "grid grid-col-1 md:grid-cols-3 lg:grid-cols-3 gap-3")}>
