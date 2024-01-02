@@ -1,4 +1,4 @@
-import styles from './Header.module.css'
+import styles from './header.module.css'
 import HeaderLogo from '../../HeaderLogo'
 import SearchMovie from '../../HeaderSearch/SearchMovie';
 import User from '../../User';
